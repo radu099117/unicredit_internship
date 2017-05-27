@@ -5,7 +5,6 @@
  */
 package com.unicredit.rest.listEvents;
 
-import com.unicred.rest.model.Event;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -27,7 +26,6 @@ public class ListEvents {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public String listEvents(){
-        StringBuilder sb = new StringBuilder("");
         String details = "";
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -39,7 +37,6 @@ public class ListEvents {
             Statement s = conn.createStatement();
             String query = "SELECT * FROM Events";
             ResultSet rs  = s.executeQuery(query);
-            ArrayList<Event> events = new ArrayList<>();
             details = "<html><body>"; 
             details = details + "<table border=1 style='text-align:center;width:600px;height:300px'>";
             details = details + "<tr><td><Strong>Id of Event </Strong></td>" +
