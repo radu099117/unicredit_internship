@@ -11,13 +11,12 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>
-            <ul>
-                <li><a href="buy_ticket.html">Buy Ticket</a></li>
-                <li><a href="rest/list_events">List Events</a></li>
-                <li><a href="rest/ticket_details">Ticket Details</a></li>
-                <li><a href="cancel_ticket.html">Cancel Ticket</a></li>
-            </ul>
-        </div>
+        <form action="rest/buy_ticket" method="POST">
+            <p>
+                Your Name:<input type="text" name="name"/></br>
+                Id of the Event:<input type="text" name="id"/></br>
+                <input type="submit" value="Buy Ticket"/>
+            </p>
+        </form>
     </body>
 </html>
