@@ -5,14 +5,12 @@
  */
 package com.unicredit.rest.ticketDetails;
 
-import com.unicredit.rest.listEvents.ListEvents;
-import com.unicredit.rest.model.Event;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ws.rs.*;
@@ -52,7 +50,7 @@ public class TicketDetails {
             }
             details += "</table></body></html>";
         } catch (SQLException ex) {
-            Logger.getLogger(ListEvents.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TicketDetails.class.getName()).log(Level.SEVERE, null, ex);
         }
         return details;
     }
