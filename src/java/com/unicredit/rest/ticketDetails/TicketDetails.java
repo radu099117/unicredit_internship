@@ -37,10 +37,13 @@ public class TicketDetails {
             Statement s = conn.createStatement();
             String query = "SELECT * FROM Tickets";
             ResultSet rs  = s.executeQuery(query);
-            details = "<html><body>"; 
-            details = details + "<table border=1 style='text-align:center;width:600px;height:300px'>";
+            details = "<html style='"
+                    + "background: #200122; "
+                    + "background: -webkit-linear-gradient(to right, #200122, #6f0000);"
+                    + "background: linear-gradient(to right, #200122, #6f0000);'><body>";
+            details = details + "<div style='width:100%;height:100%'><table border=1 style='text-align:center;width:600px;height:300px;color:white' align='center'>";
             details = details + "<tr><td><Strong>Id of Ticket </Strong></td>" +
-                                    "<td><Strong>Owner of Ticker </Strong></td>" + 
+                                    "<td><Strong>Owner of Ticket </Strong></td>" + 
                                     "<td><Strong>Id of Event </Strong></td></tr>";
             while (rs.next()) 
             {
